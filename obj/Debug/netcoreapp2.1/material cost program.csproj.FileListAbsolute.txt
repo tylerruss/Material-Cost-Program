@@ -1,0 +1,11 @@
+C:\Users\tjruss4\Documents\material cost program\bin\Debug\netcoreapp2.1\material cost program.deps.json
+C:\Users\tjruss4\Documents\material cost program\bin\Debug\netcoreapp2.1\material cost program.runtimeconfig.json
+C:\Users\tjruss4\Documents\material cost program\bin\Debug\netcoreapp2.1\material cost program.runtimeconfig.dev.json
+C:\Users\tjruss4\Documents\material cost program\bin\Debug\netcoreapp2.1\material cost program.dll
+C:\Users\tjruss4\Documents\material cost program\bin\Debug\netcoreapp2.1\material cost program.pdb
+C:\Users\tjruss4\Documents\material cost program\obj\Debug\netcoreapp2.1\material cost program.csprojAssemblyReference.cache
+C:\Users\tjruss4\Documents\material cost program\obj\Debug\netcoreapp2.1\material cost program.csproj.CoreCompileInputs.cache
+C:\Users\tjruss4\Documents\material cost program\obj\Debug\netcoreapp2.1\material cost program.AssemblyInfoInputs.cache
+C:\Users\tjruss4\Documents\material cost program\obj\Debug\netcoreapp2.1\material cost program.AssemblyInfo.cs
+C:\Users\tjruss4\Documents\material cost program\obj\Debug\netcoreapp2.1\material cost program.dll
+C:\Users\tjruss4\Documents\material cost program\obj\Debug\netcoreapp2.1\material cost program.pdb
