@@ -47,13 +47,53 @@ namespace myApp
            {
                Console.WriteLine("Total Cost = $" + dict["carpet"] * length * width);
            }
+
            else if (material == "wood")
+
          {
                 
                 Console.WriteLine("Total Cost = $" + dict["wood"] * length * width);
          }
 
+          else if (material == "tile")
+
+         {
+                
+                Console.WriteLine("Total Cost = $" + dict["tile"] * length * width);
+         }
+         
+          else if (material == "pvc")
+         {
+                
+                Console.WriteLine("Total Cost = $" + dict["pvc"] * length * width);
+         }
+
+          else if (material == "brick")
+         {
+                
+                Console.WriteLine("Total Cost = $" + dict["brick"] * length * width);
+         }
+
+          else if (material == "stone")
+         {
+                
+                Console.WriteLine("Total Cost = $" + dict["stone"] * length * width);
+         }
+
+          else if (material == "granite")
+         {
+                
+                Console.WriteLine("Total Cost = $" + dict["granite"] * length * width);
+         }
+
+         else if (material == "marble")
+         {
+                
+                Console.WriteLine("Total Cost = $" + dict["marble"] * length * width);
+         }
+
          else {
+             
              Console.WriteLine("Invalid material");
          }
       }
