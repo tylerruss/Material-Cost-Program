@@ -49,10 +49,39 @@ namespace myApp
                 case "carpet": 
                 Console.WriteLine("carpet");
                 break;
+
                 case "wood":
                 Console.WriteLine("wood");
                 break;
+
+                case "tile":
+                Console.WriteLine("tile");
+                break;
+
+                case "pvc":
+                Console.WriteLine("pvc");
+                break;
             
+                case "concrete":
+                Console.WriteLine("concrete);
+                break;
+
+                case "brick":
+                Console.WriteLine("brick");
+                break;
+
+                case "stone":
+                Console.WriteLine("stone");
+                break;
+
+                case "granite":
+                Console.WriteLine("granite");
+                break;
+
+                Case "marble":
+                Console.WriteLine("marble);
+                break;
+
             } */
 
             Console.Write("Please enter the width of the room: ");
