@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
+using System.Text;
 
 namespace myApp
 {
@@ -40,6 +41,20 @@ namespace myApp
 
             material = Console.ReadLine();
 
+          /*   string value = material;
+
+            switch (value) 
+
+            {
+                case "carpet": 
+                Console.WriteLine("carpet");
+                break;
+                case "wood":
+                Console.WriteLine("wood");
+                break;
+            
+            } */
+
             Console.Write("Please enter the width of the room: ");
 
             width = double.Parse(Console.ReadLine());
@@ -53,7 +68,9 @@ namespace myApp
             //returns price of material
             //returns area
             //returns material's price per square foot * length * width 
+            //returns total price including installation
             //decimals are rounded to 2 places
+            
 
            if (material == "carpet")
            
@@ -140,8 +157,9 @@ namespace myApp
 
          else {
 
-             Console.WriteLine("Misspelled or invalid material");
+             Console.WriteLine("Please enter a valid material");
          }
-      }
     }
- }
+    }
+}
+ 
