@@ -20,8 +20,37 @@ namespace myApp
 {
     class Program
     {
+        public class  FileRead{
+
+           public void readdata()
+    {
+        string csventry;
+        Console.WriteLine("\nPlease enter path of csv file. Example 'materials.csv'");
+        Console.Write("Path: ");
+        csventry = Console.ReadLine();
+
+        FileStream fs = new FileStream(csventry, FileMode.Open, FileAccess.Read);
+        StreamReader sr = new StreamReader(fs);//Position the File Pointer at the Beginning of the File
+        sr.BaseStream.Seek(0, SeekOrigin.Begin);//Read till the End of the File is Encountered
+        string str = sr.ReadLine();
+        while (str != null)
+        {
+            Console.WriteLine("{0}", str);
+            str = sr.ReadLine();
+        }
+        //Close the Writer and File
+        sr.Close();
+        fs.Close();
+    }
+        }
+       
       static void Main(String[] args)
     {
+
+            string[][] filearray = new string[3][];
+
+            filearray[0] = new string[5];
+
             //Declare variables
 
             String material;
@@ -242,7 +271,8 @@ namespace myApp
 
     else if (input == "csv")
     {
-
+         FileRead fr = new FileRead();
+        fr.readdata();
     }
 
     else if (input == "exit" ||

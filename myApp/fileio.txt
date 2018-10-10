@@ -6,6 +6,12 @@
             Console.WriteLine(line);
         } */
 
+     // type absolutely path to csv file
+           // void readFile(string filename)
+            //{
+            // open filename;
+            // read filename;
+            // store it in lines
 
 
          // <summary>
