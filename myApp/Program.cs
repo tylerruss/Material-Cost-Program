@@ -10,19 +10,21 @@ namespace myApp
     {
       static void Main(String[] args)
     {
+
+        Random rnd = new Random();
         //create dictionary of materials and their price per square foot
 
         Dictionary<string, int> dict = new Dictionary<string, int>()
          {
-             {"carpet", 2},
-             {"wood", 3}, 
-             {"tile", 5}, 
-             {"pvc", 2}, 
-             {"concrete", 4},
-             {"brick", 6},
-             {"stone", 7},
-             {"granite", 9},
-             {"marble", 11}
+             {"carpet", rnd.Next(2, 5)},
+             {"wood", rnd.Next(2, 7)}, 
+             {"tile", rnd.Next(4, 8)}, 
+             {"pvc", rnd.Next(2, 5)}, 
+             {"concrete", rnd.Next(3, 10)},
+             {"brick", rnd.Next(4, 9)},
+             {"stone", rnd.Next(5, 10)},
+             {"granite", rnd.Next(8, 12)},
+             {"marble", rnd.Next(10, 15)}
              
          };
 
