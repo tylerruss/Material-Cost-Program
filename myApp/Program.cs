@@ -49,7 +49,7 @@ namespace myApp
 
             string[][] filearray = new string[3][];
 
-            filearray[0] = new string[5];
+          //  filearray[0] = new string[5];
 
             //Declare variables
 
