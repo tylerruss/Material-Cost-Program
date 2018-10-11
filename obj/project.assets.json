@@ -681,30 +681,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tyler\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/tyler/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tyler\\Documents\\GitHub\\material-cost-program\\material cost program.csproj",
+      "projectUniqueName": "/Users/tyler/Documents/GitHub/material-cost-program/material cost program.csproj",
       "projectName": "material cost program",
-      "projectPath": "C:\\Users\\tyler\\Documents\\GitHub\\material-cost-program\\material cost program.csproj",
-      "packagesPath": "C:\\Users\\tyler\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tyler\\Documents\\GitHub\\material-cost-program\\obj\\",
+      "projectPath": "/Users/tyler/Documents/GitHub/material-cost-program/material cost program.csproj",
+      "packagesPath": "/Users/tyler/.nuget/packages/",
+      "outputPath": "/Users/tyler/Documents/GitHub/material-cost-program/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\tyler\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/tyler/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
