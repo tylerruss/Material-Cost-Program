@@ -1,0 +1,126 @@
+computeCost(String material, double width, double length)
+{
+
+}
+
+computeCost(parts[0], Double.Parse(parts[1]), Double.Parse(parts[2]));
+
+if totalcost > 10,000
+{
+    5% off
+}
+
+else {
+
+}
+
+sales tax 6.00%
+
+
+  public void computeCost(String material, double width, double length)
+                {
+                String mat = material.ToLower();
+                double cost = dict[mat];
+                Console.WriteLine("\nPrice of " + mat + ": $" + dict[mat] + " per square foot");
+                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
+                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict[mat] * area, 2));
+                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict[mat] * 1.8, 2));
+                }
+
+//computeCost(parts[0], Double.Parse(parts[1]), Double.Parse(parts[2]));
+
+
+ if (material.ToLower() == "carpet")
+           
+           {
+               Console.WriteLine("\nPrice of carpet: $" + dict["carpet"]  + " per square foot");
+               Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
+               Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["carpet"] * area, 2));
+               Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["carpet"] * 1.8, 2));
+               Console.WriteLine();
+           }
+
+           else if (material.ToLower() == "wood")
+
+         {
+                Console.WriteLine("\nPrice of wood: $" + dict["wood"] + " per square foot");
+                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
+                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["wood"] * area, 2));
+                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["wood"] * 1.8, 2));
+                Console.WriteLine();
+         }
+
+          else if (material.ToLower() == "tile")
+
+         {
+                Console.WriteLine("\nPrice of tile: $" + dict["tile"] + " per square foot");
+                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
+                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["tile"] * area, 2));
+                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["tile"] * 1.8, 2));
+                Console.WriteLine();
+         }
+         
+          else if (material.ToLower() == "pvc")
+
+         {
+                Console.WriteLine("\nPrice of pvc: $" + dict["pvc"] + " per square foot");
+                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
+                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["pvc"] * area, 2));
+                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["pvc"] * 1.8, 2));
+                Console.WriteLine();
+         }
+
+         else if (material.ToLower() == "concrete")
+
+         {
+
+
+                Console.WriteLine("\nPrice of concrete: $" + dict["concrete"] + " per square foot");
+                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
+                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["concrete"] * area, 2));
+                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["concrete"] * 1.8, 2));
+                Console.WriteLine();
+         }
+
+          else if (material.ToLower() == "brick")
+
+         {
+                Console.WriteLine("\nPrice of brick: $" + dict["brick"] + " per square foot");
+                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
+                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["brick"] * area, 2));
+                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["brick"] * 1.8, 2));
+                Console.WriteLine();
+         }
+
+          else if (material.ToLower() == "stone")
+
+         {
+                Console.WriteLine("\nPrice of stone: $" + dict["stone"] + " per square foot");
+                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
+                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["stone"] * area, 2));
+                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["stone"] * 1.8, 2));
+                Console.WriteLine();
+         }
+
+          else if (material.ToLower() == "granite")
+
+         {
+                Console.WriteLine("\nPrice of granite: $" + dict["granite"] + " per square foot");
+                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
+                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["granite"] * area, 2));
+                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["granite"] * 1.8, 2));
+                Console.WriteLine();
+         }
+
+         else if (material.ToLower() == "marble")
+
+         {
+                Console.WriteLine("\nPrice of marble: $" + dict["marble"] + " per square foot");
+                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
+                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["marble"] * area, 2));
+                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["marble"] * 1.8, 2));
+                Console.WriteLine();
+         }
+
+         else {
+         } 
