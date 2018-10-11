@@ -27,7 +27,7 @@ namespace myApp
         string csventry;
         Console.WriteLine("\nPlease enter path of csv file. Example 'materials.csv'");
         Console.Write("Path: ");
-        csventry = Console.ReadLine();
+        csventry = Console.ReadLine().Trim();
 
         FileStream fs = new FileStream(csventry, FileMode.Open, FileAccess.Read);
         StreamReader sr = new StreamReader(fs);//Position the File Pointer at the Beginning of the File
