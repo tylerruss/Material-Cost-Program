@@ -20,42 +20,13 @@ namespace myApp
 {
     class Program
     {
-        public class  FileRead{
-
-           public void readdata()
-    {
-        string csventry;
-        Console.WriteLine("\nPlease enter path of csv file. Example 'materials.csv'");
-        Console.Write("Path: ");
-        csventry = Console.ReadLine().Trim();
-
-        FileStream fs = new FileStream(csventry, FileMode.Open, FileAccess.Read);
-        StreamReader sr = new StreamReader(fs);//Position the File Pointer at the Beginning of the File
-        sr.BaseStream.Seek(0, SeekOrigin.Begin);//Read till the End of the File is Encountered
-        string str = sr.ReadLine();
-        while (str != null)
-        {
-            Console.WriteLine("{0}", str);
-            str = sr.ReadLine();
-        }
-        //Close the Writer and File
-        sr.Close();
-        fs.Close();
-    }
-        }
-       
       static void Main(String[] args)
     {
-
-            string[][] filearray = new string[3][];
-
-          //  filearray[0] = new string[5];
 
             //Declare variables
 
             String material;
             String input;
-            String input2;
             String length;
             String width;
             double area;
@@ -64,7 +35,7 @@ namespace myApp
 
         Random rnd = new Random();
 
-        //Create dictionary of materials and their estimated price per square foot
+        //Create dictionary called dict of materials and their estimated price per square foot
 
         Dictionary<string, int> dict = new Dictionary<string, int>()
          {
@@ -80,6 +51,22 @@ namespace myApp
              
          };
 
+            //Returns price of material per square foot which is a random number in a range
+            //Returns area
+            //Returns material's price per square foot * length * width 
+            //Returns total price including installation
+            //Decimals are rounded to 2 places
+
+          void computeCost(String materials)
+                {
+                String mat = material.ToLower();
+                double cost = dict[mat];
+                Console.WriteLine("\nPrice of " + mat + ": $" + dict[mat] + " per square foot");
+                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
+                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict[mat] * area, 2));
+                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict[mat] * 1.8, 2));
+                }
+
          //Clear console
          //Request user input on whether they want to import a csv file 
          //or enter each room individually
@@ -87,15 +74,6 @@ namespace myApp
 
         while (true)
         {
-        Console.WriteLine("\nWould you like to import a csv or enter individually?\n");
-        Console.Write("Please enter 'csv' or 'ind' or 'exit': ");
-        input = Console.ReadLine().Trim();
-
-            //If the user enters individual, then it will run a script requesting 
-            //the material, the width and the length of the room
-
-            if (input == "ind")
-            { 
                 //Display material types and request input for material, width, and length
                 Console.WriteLine("\nMaterials: carpet, wood, tile, pvc, concrete, brick, stone, granite, marble");
                 Console.Write("\nPlease enter floor material: ");
@@ -113,6 +91,7 @@ namespace myApp
                     material.ToLower() != "stone" &&
                     material.ToLower() != "granite" &&
                     material.ToLower() != "marble"
+
                     )
                 {
                     Console.WriteLine("Please enter a valid material");
@@ -123,6 +102,7 @@ namespace myApp
                 width = Console.ReadLine().Trim();
 
                 if (!double.TryParse(width, out widthdouble) || widthdouble < 1)
+                
                 {
                     Console.WriteLine("There was an error, please try again");
                 }
@@ -136,6 +116,7 @@ namespace myApp
                 length = Console.ReadLine().Trim();
 
                 if (!double.TryParse(length, out lengthdouble) || lengthdouble < 1)
+                
                 {
                     Console.WriteLine("There was an error, please try again");
                 }
@@ -146,110 +127,73 @@ namespace myApp
 
                 area = double.Parse(length) * double.Parse(width);  
 
-                //Returns price of material per square foot which is a random number in a range
-                //Returns area
-                //Returns material's price per square foot * length * width 
-                //Returns total price including installation
-                //Decimals are rounded to 2 places
+        //check if parameters are met and call the computeCost function to output the 
+        //function with those parameters
 
-               if (material.ToLower() == "carpet")
+        if (material.ToLower() == "carpet")
            
            {
-               Console.WriteLine("\nPrice of carpet: $" + dict["carpet"]  + " per square foot");
-               Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
-               Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["carpet"] * area, 2));
-               Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["carpet"] * 1.8, 2));
-               Console.WriteLine();
+                computeCost("carpet");
            }
 
-           else if (material.ToLower() == "wood")
+        else if (material.ToLower() == "wood")
 
          {
-                Console.WriteLine("\nPrice of wood: $" + dict["wood"] + " per square foot");
-                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
-                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["wood"] * area, 2));
-                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["wood"] * 1.8, 2));
-                Console.WriteLine();
+                computeCost("wood");
          }
 
-          else if (material.ToLower() == "tile")
+        else if (material.ToLower() == "tile")
 
          {
-                Console.WriteLine("\nPrice of tile: $" + dict["tile"] + " per square foot");
-                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
-                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["tile"] * area, 2));
-                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["tile"] * 1.8, 2));
-                Console.WriteLine();
+                computeCost("tile");
          }
          
-          else if (material.ToLower() == "pvc")
+        else if (material.ToLower() == "pvc")
 
          {
-                Console.WriteLine("\nPrice of pvc: $" + dict["pvc"] + " per square foot");
-                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
-                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["pvc"] * area, 2));
-                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["pvc"] * 1.8, 2));
-                Console.WriteLine();
+                computeCost("pvc");
          }
 
          else if (material.ToLower() == "concrete")
 
          {
-                Console.WriteLine("\nPrice of concrete: $" + dict["concrete"] + " per square foot");
-                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
-                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["concrete"] * area, 2));
-                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["concrete"] * 1.8, 2));
-                Console.WriteLine();
+                computeCost("concrete");
          }
 
           else if (material.ToLower() == "brick")
 
          {
-                Console.WriteLine("\nPrice of brick: $" + dict["brick"] + " per square foot");
-                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
-                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["brick"] * area, 2));
-                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["brick"] * 1.8, 2));
-                Console.WriteLine();
+                computeCost("brick");
          }
 
           else if (material.ToLower() == "stone")
 
          {
-                Console.WriteLine("\nPrice of stone: $" + dict["stone"] + " per square foot");
-                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
-                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["stone"] * area, 2));
-                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["stone"] * 1.8, 2));
-                Console.WriteLine();
+                computeCost("stone");
          }
 
           else if (material.ToLower() == "granite")
 
          {
-                Console.WriteLine("\nPrice of granite: $" + dict["granite"] + " per square foot");
-                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
-                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["granite"] * area, 2));
-                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["granite"] * 1.8, 2));
-                Console.WriteLine();
+                computeCost("granite");
          }
 
          else if (material.ToLower() == "marble")
 
          {
-                Console.WriteLine("\nPrice of marble: $" + dict["marble"] + " per square foot");
-                Console.WriteLine("Total Area = " + Math.Round(area, 2) + " sq ft");
-                Console.WriteLine("Material Cost of " + width + "x" + length + " = $" + Math.Round(dict["marble"] * area, 2));
-                Console.WriteLine("Total Cost w/ installation = $" + Math.Round(area * dict["marble"] * 1.8, 2));
-                Console.WriteLine();
+                computeCost("marble");
          }
 
          else {
+
          } 
 
-            Console.WriteLine("Would you like to calculate another room or material?");
+            Console.WriteLine("\nWould you like to calculate another room or material?");
             Console.WriteLine("Please choose 'yes' or 'no'.");
-            input2 = Console.ReadLine().Trim();
+            input = Console.ReadLine().Trim();
 
-             if (input2.ToLower() == "no")
+             if (input.ToLower() == "no")
+
                 {
                 Console.WriteLine("\nPress any key to exit.");
                 Console.ReadKey();
@@ -257,41 +201,12 @@ namespace myApp
                 break;
                 }
 
-            else if (input2.ToLower() == "yes")
+            else 
             {
-                
-            }
-            else {
 
             }
             }
-           
-        //If user enters csv instead of individual, then the user will 
-        //be prompted to read from a csv file
-
-    else if (input == "csv")
-    {
-         FileRead fr = new FileRead();
-        fr.readdata();
-    }
-
-    else if (input == "exit" ||
-             input == "no" 
-             )
-    {
-        Console.WriteLine("\nPress any key to exit");
-        Console.ReadKey();
-        Console.Clear();
-        break;
-    }
-
-    else {
-        Console.WriteLine("\nIncorrect entry, press any key to try again.");
-        Console.ReadKey();
-
     }
     }
     }
-    }
-}
  
